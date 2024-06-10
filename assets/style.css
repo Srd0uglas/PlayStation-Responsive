@@ -17,6 +17,9 @@ body{
     justify-content: center;
     align-items: center;
     display: flex;
+    /* ocupar todo o tamanho da tela (não sobrar) */
+    height: 100vh;
+    
     
 }
 
@@ -85,7 +88,22 @@ nav{
 .caixa-esquerda{
     /* Desencostou as frases da direita  */
     margin-left: 50px;
+    position: relative;
 }
+/* Linha ao lado direito da template  */
+/* irá funcionar se na configuração do caixa-esquerda for absolute  */
+.caixa-esquerda::before{
+    content: "";
+    width: 10px;
+    height: 57%;
+    position: absolute;
+    left: -40px;
+    top: 8px;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+
+
+}
+
 h2{
     font-size: 54px;
 }
@@ -108,7 +126,7 @@ h4{
     font-weight: 100;
 }
 
-button{
+.comprar{
     width: 140px;
     border: none;
     padding: 12px 1px;
@@ -128,15 +146,40 @@ button{
     /* a caixa vai ficar atrás do controle, então o z index dele vai ser 12 */
     z-index: 2;
 }
+
 /* formatação da caixa colorida */
 .caixa-controle{
     position: absolute;
     right: 0;
     top: 0;
-    background: linear-gradient(to right, #fb5283, #ff3527);
-    border: 20px 0 0 20px;
-    /* z-index define o que fica na frente de quem */
+    background: linear-gradient(#ff54a2, #ff575a);    /* z-index define o que fica na frente de quem */
     /* a caixa vai ficar atrás do controle, então o z index dele vai ser 1  */
     z-index: 1;
     transform: translateX(150px);
+    height: 100%;
+    width: 80%;
+    border-radius: 10px;
+}
+.btn-direita{
+    z-index: 2;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+.btn-direita img{
+    height: 45px;
+    width: 45px;
+}
+
+/* Estilização dos botões de redes sociais */
+.icones-redes-soc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icones-redes-soc img{
+    height: 20px;
+    margin: 20px;
+    cursor:pointer;
 }
