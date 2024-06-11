@@ -152,13 +152,15 @@ h4{
     position: absolute;
     right: 0;
     top: 0;
-    background: linear-gradient(#ff54a2, #ff575a);    /* z-index define o que fica na frente de quem */
+    background: linear-gradient(#ff54a2, #ff575a);    
+    
+    /* z-index define o que fica na frente de quem */
     /* a caixa vai ficar atrás do controle, então o z index dele vai ser 1  */
     z-index: 1;
     transform: translateX(150px);
     height: 100%;
     width: 80%;
-    border-radius: 10px;
+    border-radius: 50px;
 }
 .btn-direita{
     z-index: 2;
@@ -182,4 +184,39 @@ h4{
     height: 20px;
     margin: 20px;
     cursor:pointer;
+}
+
+.menu-icon{
+    width: 25px;
+    margin-right: 10px;
+    /* display none por que eu só preciso do botão quando as dimensões forem menores de 760px, enquanto for maior eu queero que ele suma */
+    display: none;
+}
+
+
+
+/* o menu vai aparecer até 760px, abaixo disso o menu irá desaparecer */
+@media (max-width:760px){
+    /* body{
+        background: red;
+    } */
+     #menu-list{
+        /* position: relative; deixou os links abaico do botão*/
+        position: relative;
+        top: 60px;
+        left: 60px;
+        /* overflow: hidden = esconder o menu quando o height: tiver 0px */
+        overflow: hidden;
+     }
+     /* Fazer com que o botão do menu apareça quando as diemnsões forem menores que 760px */
+     .menu-icon{
+        display: block;
+     }
+
+     .li-link{
+        /* os links vão ficar uns embaixo os outros com essa propriedade */
+        display: block;
+        margin-top: 5px;
+     }
+
 }

@@ -12,21 +12,22 @@
        <div class="nav">
         <img class="logo"src="assets/img/logo.png" alt="Logo-Play">
         <nav>
-            <ul>
-                <li>
+            <ul id="menu-list">
+                <li class="li-link">
                     <a class ="nav-link"href="#">Consoles</a>
                 </li>
-                <li>
+                <li class="li-link">
                     <a class ="nav-link" href="#">Acessórios</a>
                 </li>
-                <li>
+                <li class="li-link">
                     <a class ="nav-link" href="#">Controles</a>
                 </li>
-                <li>
+                <li class="li-link">
                     <a class ="nav-link" href="#">Outros</a>
                 </li>
             </ul>
         </nav>
+        <img src="assets/img/menu.png" class="menu-icon" onclick=" showMenu()">
        </div>
 
 <!-- corpo do Site -->
@@ -41,7 +42,7 @@
 
 <h4>R$222,50</h4>
 
-<button class="comprar">Comprar Agora</button>
+<button class="comprar">Ver Cardápio</button>
 </div>
 
 
@@ -65,7 +66,24 @@
     <img src="assets/img/tw.png" alt="">
 </div> <!-- fim div icones-redes-soc -->
 </div>
+<script>
+    const menuList = document.getElementById("menu-list")
+    // Quando o dispositivo tiver menos que 760px o botão vai aparecer mas sem aparecer os links, só quando clicar no botão
+    menuList.style.maxHeight = "0px"
 
+
+    // Cliquei no botão vai acionar a função showMenu
+    function showMenu(){
+        // o menu está em zero?
+        if(menuList.style.maxHeight == "0px"){  
+            // se sim, abre o menu
+            menuList.style.maxHeight = "120px"
+        }else{
+            // se o meu botão eestá aberto, eu quero fechar
+            menuList.style.maxHeight = "0px"
+        }
+    }
+</script>
 
 
 
