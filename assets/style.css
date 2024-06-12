@@ -170,8 +170,10 @@ h4{
     
 }
 .btn-direita img{
-    height: 45px;
-    width: 45px;
+    height: 100%;
+    width: 100%;
+    /* Limitar o tamanho do botão para que ele não fique tão grande  */
+    max-width: 55px;
 }
 
 /* Estilização dos botões de redes sociais */
@@ -197,11 +199,30 @@ h4{
 
 /* o menu vai aparecer até 760px, abaixo disso o menu irá desaparecer */
 @media (max-width:760px){
+    .caixa-meio{
+          /* Propriedade que faz com que o contole fique em cima das frases quando a tela for dimunuida  */
+          flex-direction: column-reverse;
+    }
+
+    .caixa-direita{
+        margin-bottom: 30px;
+    }
+    .caixa-controle{
+        /* trouxe a caixa atrás do controle mais pra esquerda  */
+        transform: translateX(70px);
+    }
+    .central{
+        /* Ocupando a tela toda (sumir com o gradiente quando a tela fo diminuída) */
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        overflow: auto;
+    }
     /* body{
         background: red;
     } */
      #menu-list{
-        /* position: relative; deixou os links abaico do botão*/
+        /* position: relative; deixou os links abaixo do botão*/
         position: relative;
         top: 60px;
         left: 60px;
@@ -220,3 +241,7 @@ h4{
      }
 
 }
+
+
+/* background: rgb(237,150,89);
+background: linear-gradient(90deg, rgba(237,150,89,1) 0%, rgba(237,211,114,0.969625350140056) 28%, rgba(242,209,83,0.9556197478991597) 71%, rgba(237,150,89,1) 100%); */
