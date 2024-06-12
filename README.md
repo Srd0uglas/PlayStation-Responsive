@@ -1,7 +1,7 @@
 
 Página da PlayStation Responsiva 
 
-Este projeto foi criado com o objetivo de aprimorar suas habilidades de desenvolvimento web, especialmente em CSS e JavaScript, enquanto você constrói uma landing page para a PlayStation. A responsiidade é um aspecto crucial do design moderno, e este projeto oferece uma oportunidade prática para entender e aplicar os princípios de design responsivo em uma página de destaque para uma das marcas mais reconhecidas da indústria de jogos.
+Este projeto foi criado com o objetivo de aprimorar minhas habilidades de desenvolvimento web, especialmente em CSS e JavaScript. A responsiidade é um aspecto crucial do design moderno, e este projeto oferece uma oportunidade prática para entender e aplicar os princípios de design responsivo em uma página de destaque para uma das marcas mais reconhecidas da indústria de jogos.
 
 Principais Características:
 Design Responsivo: A página se adapta de forma fluida a uma variedade de dispositivos, desde desktops até smartphones, garantindo uma experiência consistente e atraente para todos os usuários.
