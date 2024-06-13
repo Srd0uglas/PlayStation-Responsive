@@ -127,7 +127,7 @@ h4{
 }
 
 .comprar{
-    width: 140px;
+    width: 160px;
     border: none;
     padding: 12px 1px;
     outline: none;
@@ -135,6 +135,19 @@ h4{
     border-radius: 6px;
     cursor: pointer;
     background: linear-gradient(to right, #fb5283, #ff3527);
+    /* Fez com que a seta ficasse ao lado do texto do botão */
+
+    display: flex;
+    /* deixou o texto do menu e a seta ao lado uma da outra */
+    flex-direction: row;
+    align-items: center;
+    /* deixou o texto do botão de um lado e a seta do outro */
+    justify-content: space-between;
+}
+
+
+.comprar img{
+    height: 30px;
 }
 .caixa-direita{
     display: flex;
@@ -216,6 +229,7 @@ h4{
         width: 100vw;
         height: 100vh;
         border-radius: 0;
+        /* Mostra a barra de rolagem quando a tela ficar pequena */
         overflow: auto;
     }
     /* body{
@@ -228,10 +242,14 @@ h4{
         left: 60px;
         /* overflow: hidden = esconder o menu quando o height: tiver 0px */
         overflow: hidden;
+        /* Transição da descida dos links no menu */
+        transition: all 0.5 s 0.10s ease-in-out;
      }
      /* Fazer com que o botão do menu apareça quando as diemnsões forem menores que 760px */
      .menu-icon{
         display: block;
+        /* O cursor ficar com a maozinha de link no botão */
+        cursor: pointer;
      }
 
      .li-link{
@@ -241,6 +259,37 @@ h4{
      }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+/* #box{ */
+    /* Quadrado */
+    /* width: 500px;
+    height: 500px;
+    background-color: #000; */
+    /* vai demorar 1 segundo pra acontecer quando eu passar o mouse */
+    /* transition-delay: 1s; */
+
+    /* transition-duration: 0.5s; */
+    /* suvizar o começo e final da transição */
+    /* transition-timing-function: ease-in-out; */
+/* } */
+/* #box:hover{ */
+    /* Arredondamento do quadrado */
+    /* width: 250px;
+    height: 250px;
+    background-color: blue;
+    border-radius: 50%;
+} */
+
 
 
 /* background: rgb(237,150,89);
