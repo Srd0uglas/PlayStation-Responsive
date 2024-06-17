@@ -135,21 +135,31 @@ h4{
     border-radius: 6px;
     cursor: pointer;
     background: linear-gradient(to right, #fb5283, #ff3527);
-    /* Fez com que a seta ficasse ao lado do texto do botão */
-
-    display: flex;
-    /* deixou o texto do menu e a seta ao lado uma da outra */
-    flex-direction: row;
-    align-items: center;
-    /* deixou o texto do botão de um lado e a seta do outro */
-    justify-content: space-between;
 }
 
 
 .comprar img{
-    height: 40px;
+    width: 50px;
+    /* fez as seta desaparecer */
+    display: none;
 
 }
+.comprar:hover{
+        /* Fez com que a seta ficasse ao lado do texto do botão */
+        display: flex;
+        /* deixou o texto do menu e a seta ao lado uma da outra */
+        flex-direction: row;
+        align-items: center;
+        /* deixou o texto do botão de um lado e a seta do outro */
+        justify-content: space-between;
+        transition: all 0.5s ease-in-out;
+
+}
+.comprar:hover img{
+    /* fez a seta aparecer pq de padrão ela não aparece */
+    display: block;
+}
+
 .caixa-direita{
     display: flex;
     align-items: center;
@@ -159,6 +169,8 @@ h4{
     width: 90%;
     /* a caixa vai ficar atrás do controle, então o z index dele vai ser 12 */
     z-index: 2;
+    /* A minha animação vai ter 2s, vai ser infinita, vai ficar indo e voltando e vai ter uma suavização */
+    animation: Mover-Controle 2s infinite alternate ease-in-out;
 }
 
 /* formatação da caixa colorida */
@@ -167,7 +179,6 @@ h4{
     right: 0;
     top: 0;
     background: linear-gradient(#ff54a2, #ff575a);    
-    
     /* z-index define o que fica na frente de quem */
     /* a caixa vai ficar atrás do controle, então o z index dele vai ser 1  */
     z-index: 1;
@@ -262,15 +273,17 @@ h4{
 }
 
 
+@keyframes Mover-Controle{
+    from{
+        /* Ponto inicial */
+        /* Diminuir 5% da posição que ele está e rotacionar 5% */
+        transform: translate(-5%, -5%) rotate(-5deg);
+    }
+   
+}
 
 
-
-
-
-
-
-
-
+/* TESTES */
 /* #box{ */
     /* Quadrado */
     /* width: 500px;
