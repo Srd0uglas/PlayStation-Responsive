@@ -18,9 +18,7 @@ body{
     align-items: center;
     display: flex;
     /* ocupar todo o tamanho da tela (não sobrar) */
-    height: 100vh;
-    
-    
+    min-height: 100vh;
 }
 
 .central{
@@ -100,8 +98,6 @@ nav{
     left: -40px;
     top: 8px;
     background: linear-gradient(to right, #fb5283, #ff3527);
-
-
 }
 
 h2{
